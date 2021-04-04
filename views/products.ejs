@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product App</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% if (products.length > 0){%>
+        <ul class="timeline">
+            <%  for (let product of products){ %>
+              <li class="timeline-yellow">
+                <div class="timeline-time">
+                  <span class="date" style="text-align:left">
+                    <%= product.id %>  </span>
+                    <span class="time">
+                    <%= product.name %> </span>
+                    <span class="time">
+                        <%= product.imgUrl %> </span>
+                        <span class="time">
+                            <%= product.price %> </span>
+                </div>
+            </li>
+            <% } %>
+        </ul>
+       <%}%>   
+       <br><br>
+       <a href="/">Return to Home Page</a>
+
+  </body>
+</html>
